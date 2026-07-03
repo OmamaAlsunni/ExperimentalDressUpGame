@@ -1,0 +1,190 @@
+img {
+    border: none;
+    outline: none;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f5ecdf;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+#game-container {
+    position: relative;
+    width: min(95vw, calc(95vh * 509 / 725));
+    aspect-ratio: 509 / 725;
+    overflow: hidden;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#character, #hair-layer, #outfit-layer {
+    position: absolute;
+    top: 30.9%;
+    left: 24.4%;
+    width: 47.5%;
+    height: 47.1%;
+    z-index: 2;
+}
+
+/* Fix: hide hair/outfit layers until JS assigns a src,
+   so no broken-image icon shows before a choice is made */
+#hair-layer:not([src]),
+#outfit-layer:not([src]) {
+    display: none;
+}
+
+#panel {
+    position: absolute;
+    top: 21.24%;
+    left: 2.75%;
+    width: 32.81%;
+    height: 42.62%;
+    z-index: 4;
+}
+
+#panel-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#close-btn {
+    position: absolute;
+    top: -3.5%;
+    left: 82%;
+    width: 24%;
+    height: 13.3%;
+    z-index: 2;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+#close-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Outfit options: centered in panel, tighter gap, size unchanged */
+#outfit-options {
+    position: absolute;
+    top: 8.4%;
+    bottom: 8%;
+    left: 4%;
+    right: 4%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+
+#outfit-options button {
+    border: none;
+    background: none;
+    padding: 0;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#outfit-options img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Hair options: centered in panel, bigger buttons, tighter gap */
+#hair-options {
+    position: absolute;
+    top: 50%;
+    bottom: 10%;
+    left: 4%;
+    right: 4%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+}
+
+#hair-options button {
+    border: none;
+    background: none;
+    padding: 0;
+    height: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hair-options img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+#undo-btn, #redo-btn {
+    position: absolute;
+    top: 20.3%;
+    width: 8%;
+    height: 4.5%;
+    z-index: 3;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+#undo-btn { left: 69.2%; }
+#redo-btn { left: 79%; }
+
+#undo-btn img, #redo-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#hair-menu-btn, #outfit-menu-btn {
+    position: absolute;
+    left: 71%;
+    width: 19%;
+    height: 13.4%;
+    z-index: 3;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+#hair-menu-btn { top: 28.7%; }
+#outfit-menu-btn { top: 48.4%; }
+
+#hair-menu-btn img, #outfit-menu-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
