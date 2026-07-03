@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress Up Game</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+</head>
+<body>
+
+    <div id="game-container">
+        <img id="bg" src="assets/bg.png">
+        <img id="character" src="assets/base_body.png">
+        <img id="hair-layer">
+        <img id="outfit-layer">
+
+        <button id="undo-btn"><img src="assets/undo.png"></button>
+        <button id="redo-btn"><img src="assets/redo.png"></button>
+
+        <div id="panel" hidden>
+            <img id="panel-bg" src="assets/panel.png">
+            <button id="close-btn"><img src="assets/x_button.png"></button>
+
+            <div id="hair-options" hidden>
+                <button id="hair-blonde-btn"><img src="assets/blonde_hair.png"></button>
+                <button id="hair-brunette-btn"><img src="assets/brunette_hair.png"></button>
+            </div>
+
+            <div id="outfit-options" hidden>
+                <button id="outfit-casual-btn"><img src="assets/casual_outfit.png"></button>
+                <button id="outfit-dress-btn"><img src="assets/dress_outfit.png"></button>
+            </div>
+
+        </div>
+
+        <button id="hair-menu-btn"><img src="assets/hair_icon.png"></button>
+        <button id="outfit-menu-btn"><img src="assets/outfit_icon.png"></button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+
+    <script type="py" src="main.py"></script>
+
+</body>
+</html>
