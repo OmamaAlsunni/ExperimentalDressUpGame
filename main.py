@@ -120,8 +120,13 @@ document.getElementById("close-btn").addEventListener("click", create_proxy(clos
 
 document.getElementById("hair-blonde-btn").addEventListener("click", create_proxy(choose_hair_blonde))
 document.getElementById("hair-brunette-btn").addEventListener("click", create_proxy(choose_hair_brunette))
+document.getElementById("hair-wavy-brunette-btn").addEventListener("click", create_proxy(choose_hair_wavy_brunette))
+document.getElementById("hair-long-espresso-bangs-btn").addEventListener("click", create_proxy(choose_hair_long_espresso_bangs))
+document.getElementById("hair-long-black-btn").addEventListener("click", create_proxy(choose_hair_long_black))
 document.getElementById("outfit-casual-btn").addEventListener("click", create_proxy(choose_outfit_casual))
 document.getElementById("outfit-dress-btn").addEventListener("click", create_proxy(choose_outfit_dress))
+document.getElementById("outfit-cardigan-dress-btn").addEventListener("click", create_proxy(choose_outfit_cardigan_dress))
+document.getElementById("outfit-blazer-trousers-btn").addEventListener("click", create_proxy(choose_outfit_blazer_trousers))
 
 document.getElementById("undo-btn").addEventListener("click", create_proxy(undo))
 document.getElementById("redo-btn").addEventListener("click", create_proxy(redo))
