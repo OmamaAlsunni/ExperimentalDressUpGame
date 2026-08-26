@@ -8,8 +8,13 @@ hair_options = document.getElementById("hair-options")
 outfit_options = document.getElementById("outfit-options")
 HAIR_BLONDE = "assets/blonde_hair.png"
 HAIR_BRUNETTE = "assets/brunette_hair.png"
+HAIR_WAVY_BRUNETTE = "assets/wavy_brunette_hair.png"
+HAIR_LONG_ESPRESSO_BANGS = "assets/long_espresso_bangs_hair.png"
+HAIR_LONG_BLACK = "assets/long_black_hair.png"
 OUTFIT_CASUAL = "assets/casual_outfit.png"
 OUTFIT_DRESS = "assets/dress_outfit.png"
+OUTFIT_CARDIGAN_DRESS = "assets/cardigan_dress_outfit.png"
+OUTFIT_BLAZER_TROUSERS = "assets/blazer_trousers_outfit.png"
 
 undo_stack = []
 redo_stack = []
@@ -81,6 +86,18 @@ def choose_hair_brunette(event):
     save_state()
     toggle_layer(hair_layer, HAIR_BRUNETTE)
 
+def choose_hair_wavy_brunette(event):
+    save_state()
+    toggle_layer(hair_layer, HAIR_WAVY_BRUNETTE)
+
+def choose_hair_long_espresso_bangs(event):
+    save_state()
+    toggle_layer(hair_layer, HAIR_LONG_ESPRESSO_BANGS)
+    
+def choose_hair_long_black(event):
+    save_state()
+    toggle_layer(hair_layer, HAIR_LONG_BLACK)
+    
 def choose_outfit_casual(event):
     save_state()
     toggle_layer(outfit_layer, OUTFIT_CASUAL)
@@ -88,6 +105,14 @@ def choose_outfit_casual(event):
 def choose_outfit_dress(event):
     save_state()
     toggle_layer(outfit_layer, OUTFIT_DRESS)
+
+def choose_outfit_cardigan_dress(event):
+    save_state()
+    toggle_layer(outfit_layer, OUTFIT_CARDIGAN_DRESS)
+
+def choose_outfit_blazer_trousers(event):
+    save_state()
+    toggle_layer(outfit_layer, OUTFIT_BLAZER_TROUSERS)
 
 document.getElementById("hair-menu-btn").addEventListener("click", create_proxy(open_hair_panel))
 document.getElementById("outfit-menu-btn").addEventListener("click", create_proxy(open_outfit_panel))
