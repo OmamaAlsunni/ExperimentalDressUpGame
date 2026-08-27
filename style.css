@@ -157,7 +157,7 @@ body {
 
 .panel-page button {
     border: none;
-    background: transparent; /* Removes the colored rectangle */
+    background: transparent;
     border-radius: 0;
     padding: 0;
     width: 90%;
@@ -170,27 +170,25 @@ body {
     overflow: hidden;
 }
 
-/* Base image zoom method tuned to avoid cropping */
+/* Moderate scale to prevent top/bottom cuts */
 .panel-page img {
-    width: 190%;
-    height: 190%;
+    width: 140%;
+    height: 140%;
     max-width: none;
     max-height: none;
     object-fit: cover;
 }
 
 /* --- HAIR ADJUSTMENTS --- */
-
-/* Hair options focal point: framed cleanly on head/hairline */
+/* Shifted down to bring top of pigtails/bobs fully into view */
 #hair-options .panel-page img {
-    object-position: 50% 18%;
+    object-position: 50% 28%;
 }
 
 /* --- OUTFIT ADJUSTMENTS --- */
-
-/* Outfit options focal point: framed cleanly on torso */
+/* Center directly on outfits */
 #outfit-options .panel-page img {
-    object-position: 50% 42%;
+    object-position: 50% 50%;
 }
 
 /* --- PAGINATION BUTTONS --- */
