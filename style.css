@@ -158,41 +158,38 @@ body {
 .panel-page button {
     border: none;
     background: transparent;
-    border-radius: 0;
     padding: 0;
-    width: 90%;
+    width: 85%;
     height: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     flex-shrink: 0;
+    position: relative;
     overflow: hidden;
 }
 
-/* Moderate scale to prevent top/bottom cuts */
-.panel-page img {
-    width: 140%;
-    height: 140%;
+/* Shift artwork upward/downward using margin offsets without altering source paths */
+#hair-options .panel-page img {
+    width: 260%;
+    height: 260%;
     max-width: none;
     max-height: none;
-    object-fit: cover;
+    object-fit: contain;
+    margin-top: -30%;
 }
 
-/* --- HAIR ADJUSTMENTS --- */
-/* Shifted down to bring top of pigtails/bobs fully into view */
-#hair-options .panel-page img {
-    object-position: 50% 28%;
-}
-
-/* --- OUTFIT ADJUSTMENTS --- */
-/* Center directly on outfits */
 #outfit-options .panel-page img {
-    object-position: 50% 50%;
+    width: 240%;
+    height: 240%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    margin-top: -65%;
 }
 
-/* --- PAGINATION BUTTONS --- */
-
+/* Pagination controls */
 .pagination-controls {
     display: flex;
     justify-content: space-between;
