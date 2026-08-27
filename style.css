@@ -188,3 +188,20 @@ body {
     height: 100%;
     object-fit: contain;
 }
+
+.panel-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.panel-page.hidden {
+  display: none;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
