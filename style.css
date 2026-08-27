@@ -158,9 +158,10 @@ body {
 .panel-page button {
     border: none;
     background: transparent;
-    padding: 0;
-    width: 85%;
-    height: 30%;
+    padding: 4%;
+    box-sizing: border-box;
+    width: 90%;
+    height: 31%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,60 +170,14 @@ body {
     overflow: hidden;
 }
 
-/* Default state for menu images: safely contained inside button */
+/* Every thumbnail scales down to fit fully inside its button while keeping
+   its own aspect ratio. This is what guarantees an image is never cropped,
+   no matter how tall/short/wide that particular PNG happens to be. */
 .panel-page img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
-
-/* ==========================================
-   PAGE 1 SPECIFIC STYLES
-   ========================================== */
-
-/* Hair Page 1: Zoom in slightly on heads */
-#hair-options .panel-page:nth-child(1) img {
-    width: 180%;
-    height: 180%;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
-    object-position: 50% 15%;
-}
-
-/* Outfit Page 1: Zoom in on upper torso/clothing */
-#outfit-options .panel-page:nth-child(1) img {
-    width: 160%;
-    height: 160%;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
-    object-position: 50% 35%;
-}
-
-/* ==========================================
-   PAGE 2 SPECIFIC STYLES
-   ========================================== */
-
-/* Hair Page 2: Scaled & shifted down to fit low pigtails/extensions */
-#hair-options .panel-page:nth-child(2) img {
-    width: 170%;
-    height: 170%;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
-    object-position: 50% 25%;
-    transform: translateY(12px);
-}
-
-/* Outfit Page 2: Scaled & centered on lower garments/jackets */
-#outfit-options .panel-page:nth-child(2) img {
-    width: 150%;
-    height: 150%;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
-    object-position: 50% 50%;
+    object-position: center;
 }
 
 /* ==========================================
