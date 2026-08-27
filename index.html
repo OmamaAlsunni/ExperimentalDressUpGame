@@ -22,20 +22,39 @@
             <img id="panel-bg" src="assets/panel.png">
             <button id="close-btn"><img src="assets/x_button.png"></button>
 
-            <div id="hair-options" hidden>
+            <!-- Hair Options Panel -->
+            <div id="hair-options" class="hidden">
+              <div class="panel-page" id="hair-page-1">
                 <button id="hair-blonde-btn"><img src="assets/blonde_hair.png"></button>
                 <button id="hair-brunette-btn"><img src="assets/brunette_hair.png"></button>
                 <button id="hair-wavy-brunette-btn"><img src="assets/wavy_brunette_hair.png"></button>
+              </div>
+              <div class="panel-page hidden" id="hair-page-2">
                 <button id="hair-long-espresso-bangs-btn"><img src="assets/long_espresso_bangs_hair.png"></button>
                 <button id="hair-long-black-btn"><img src="assets/long_black_hair.png"></button>
+              </div>
+              <div class="pagination-controls">
+                <button id="hair-prev-btn">&lt;</button>
+                <button id="hair-next-btn">&gt;</button>
+              </div>
             </div>
 
-            <div id="outfit-options" hidden>
+            <!-- Outfit Options Panel -->
+            <div id="outfit-options" class="hidden">
+              <div class="panel-page" id="outfit-page-1">
                 <button id="outfit-casual-btn"><img src="assets/casual_outfit.png"></button>
                 <button id="outfit-dress-btn"><img src="assets/dress_outfit.png"></button>
+              </div>
+              <div class="panel-page hidden" id="outfit-page-2">
                 <button id="outfit-cardigan-dress-btn"><img src="assets/cardigan_dress_outfit.png"></button>
                 <button id="outfit-blazer-trousers-btn"><img src="assets/blazer_trousers_outfit.png"></button>
+              </div>
+              <div class="pagination-controls">
+                <button id="outfit-prev-btn">&lt;</button>
+                <button id="outfit-next-btn">&gt;</button>
+              </div>
             </div>
+
 
         </div>
 
