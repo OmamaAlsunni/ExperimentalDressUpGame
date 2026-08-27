@@ -166,30 +166,49 @@ body {
     justify-content: center;
     cursor: pointer;
     flex-shrink: 0;
-    position: relative;
     overflow: hidden;
 }
 
-/* Shift artwork upward/downward using margin offsets without altering source paths */
-#hair-options .panel-page img {
-    width: 260%;
-    height: 260%;
+.panel-page img {
+    width: 250%;
+    height: 250%;
     max-width: none;
     max-height: none;
-    object-fit: contain;
-    margin-top: -30%;
+    object-fit: cover;
+}
+
+/* Base positions */
+#hair-options .panel-page img {
+    object-position: 50% 20%;
 }
 
 #outfit-options .panel-page img {
-    width: 240%;
-    height: 240%;
-    max-width: none;
-    max-height: none;
-    object-fit: contain;
-    margin-top: -65%;
+    object-position: 50% 40%;
 }
 
-/* Pagination controls */
+/* ==========================================
+   TARGETED PIXEL SHIFTS FOR PAGE 2
+   ========================================== */
+
+/* Hair Page 2 - Moves top & middle hairs down */
+#hair-options .panel-page:nth-child(2) img {
+    transform: translateY(18px);
+}
+
+/* Hair Page 2 - Moves bottom hair down further */
+#hair-options .panel-page:nth-child(2) button:last-child img {
+    transform: translateY(30px);
+}
+
+/* Outfit Page 2 - Moves outfits down */
+#outfit-options .panel-page:nth-child(2) img {
+    transform: translateY(22px);
+}
+
+/* ==========================================
+   PAGINATION BUTTONS
+   ========================================== */
+
 .pagination-controls {
     display: flex;
     justify-content: space-between;
