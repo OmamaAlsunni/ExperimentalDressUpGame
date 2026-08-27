@@ -169,40 +169,60 @@ body {
     overflow: hidden;
 }
 
+/* Default state for menu images: safely contained inside button */
 .panel-page img {
-    width: 250%;
-    height: 250%;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
-}
-
-/* Base positions */
-#hair-options .panel-page img {
-    object-position: 50% 20%;
-}
-
-#outfit-options .panel-page img {
-    object-position: 50% 40%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* ==========================================
-   TARGETED PIXEL SHIFTS FOR PAGE 2
+   PAGE 1 SPECIFIC STYLES
    ========================================== */
 
-/* Hair Page 2 - Moves top & middle hairs down */
+/* Hair Page 1: Zoom in slightly on heads */
+#hair-options .panel-page:nth-child(1) img {
+    width: 180%;
+    height: 180%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: 50% 15%;
+}
+
+/* Outfit Page 1: Zoom in on upper torso/clothing */
+#outfit-options .panel-page:nth-child(1) img {
+    width: 160%;
+    height: 160%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: 50% 35%;
+}
+
+/* ==========================================
+   PAGE 2 SPECIFIC STYLES
+   ========================================== */
+
+/* Hair Page 2: Scaled & shifted down to fit low pigtails/extensions */
 #hair-options .panel-page:nth-child(2) img {
-    transform: translateY(18px);
+    width: 170%;
+    height: 170%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: 50% 25%;
+    transform: translateY(12px);
 }
 
-/* Hair Page 2 - Moves bottom hair down further */
-#hair-options .panel-page:nth-child(2) button:last-child img {
-    transform: translateY(30px);
-}
-
-/* Outfit Page 2 - Moves outfits down */
+/* Outfit Page 2: Scaled & centered on lower garments/jackets */
 #outfit-options .panel-page:nth-child(2) img {
-    transform: translateY(22px);
+    width: 150%;
+    height: 150%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 /* ==========================================
