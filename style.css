@@ -85,20 +85,6 @@ body {
     object-fit: contain;
 }
 
-/* Outfit options: centered in panel, tighter gap, size unchanged */
-#outfit-options {
-    position: absolute;
-    top: 8.4%;
-    bottom: 8%;
-    left: 4%;
-    right: 4%;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4%;
-}
 
 #outfit-options button {
     border: none;
@@ -115,21 +101,6 @@ body {
     width: auto;
     max-width: 100%;
     object-fit: contain;
-}
-
-/* Hair options: centered in panel, bigger buttons, tighter gap */
-#hair-options {
-    position: absolute;
-    top: 50%;
-    bottom: 10%;
-    left: 4%;
-    right: 4%;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1%;
 }
 
 #hair-options button {
@@ -189,19 +160,81 @@ body {
     object-fit: contain;
 }
 
+/* Container rules for both panels */
+#hair-options, #outfit-options {
+    position: absolute;
+    top: 10%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Page container: holds items for current page */
 .panel-page {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
 }
 
 .panel-page.hidden {
-  display: none;
+    display: none !important;
 }
 
+/* Constrain item buttons and images inside panel bounds */
+.panel-page button {
+    border: none;
+    background: none;
+    padding: 0;
+    width: 80%;
+    max-height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.panel-page img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Styled navigation controls at the bottom of the panel */
 .pagination-controls {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 15%;
+}
+
+.pagination-controls button {
+    background: #e8caa4;
+    border: 2px solid #8c6747;
+    border-radius: 6px;
+    color: #4a321a;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+.pagination-controls button:active {
+    background: #c9a479;
+}
+
+
+.panel-page.hidden {
+  display: none;
 }
