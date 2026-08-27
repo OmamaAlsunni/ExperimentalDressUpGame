@@ -130,3 +130,55 @@ document.getElementById("outfit-blazer-trousers-btn").addEventListener("click", 
 
 document.getElementById("undo-btn").addEventListener("click", create_proxy(undo))
 document.getElementById("redo-btn").addEventListener("click", create_proxy(redo))
+
+# Track active page indices
+current_hair_page = 1
+total_hair_pages = 2
+
+current_outfit_page = 1
+total_outfit_pages = 2
+
+# Hair Pagination Handlers
+def show_hair_page(page_num):
+    global current_hair_page
+    current_hair_page = page_num
+    for i in range(1, total_hair_pages + 1):
+        page = document.getElementById(f"hair-page-{i}")
+        if i == page_num:
+            page.classList.remove("hidden")
+        else:
+            page.classList.add("hidden")
+
+def next_hair_page(event):
+    if current_hair_page < total_hair_pages:
+        show_hair_page(current_hair_page + 1)
+
+def prev_hair_page(event):
+    if current_hair_page > 1:
+        show_hair_page(current_hair_page - 1)
+
+# Outfit Pagination Handlers
+def show_outfit_page(page_num):
+    global current_outfit_page
+    current_outfit_page = page_num
+    for i in range(1, total_outfit_pages + 1):
+        page = document.getElementById(f"outfit-page-{i}")
+        if i == page_num:
+            page.classList.remove("hidden")
+        else:
+            page.classList.add("hidden")
+
+def next_outfit_page(event):
+    if current_outfit_page < total_outfit_pages:
+        show_outfit_page(current_outfit_page + 1)
+
+def prev_outfit_page(event):
+    if current_outfit_page > 1:
+        show_outfit_page(current_outfit_page - 1)
+
+# Event Listeners for Pagination Controls
+document.getElementById("hair-next-btn").addEventListener("click", create_proxy(next_hair_page))
+document.getElementById("hair-prev-btn").addEventListener("click", create_proxy(prev_hair_page))
+document.getElementById("outfit-next-btn").addEventListener("click", create_proxy(next_outfit_page))
+document.getElementById("outfit-prev-btn").addEventListener("click", create_proxy(prev_outfit_page))
+
