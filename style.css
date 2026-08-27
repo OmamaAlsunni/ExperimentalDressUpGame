@@ -129,6 +129,156 @@ body {
 
 #hair-options, #outfit-options {
     position: absolute;
+    top: 6%;
+    bottom: 3%;
+    left: 4%;
+    right: 4%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.panel-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 84%;
+    box-sizing: border-box;
+}
+
+.panel-page.hidden {
+    display: none !important;
+}
+
+.panel-page button {
+    border: none;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    padding: 0;
+    width: 90%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+/* Base image styling */
+.panel-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+/* Hair image focal point and scaling */
+#hair-options .panel-page img {
+    transform: scale(1.65);
+    transform-origin: center 28%;
+}
+
+/* Outfit image focal point and scaling */
+#outfit-options .panel-page img {
+    transform: scale(1.65);
+    transform-origin: center 50%;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 12%;
+}
+
+.pagination-controls button {
+    background: #e8caa4;
+    border: 2px solid #8c6747;
+    border-radius: 6px;
+    color: #4a321a;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+.pagination-controls button:active {
+    background: #c9a479;
+}
+    z-index: 0;
+}
+
+#close-btn {
+    position: absolute;
+    top: -3.5%;
+    left: 82%;
+    width: 24%;
+    height: 13.3%;
+    z-index: 2;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+#close-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#undo-btn, #redo-btn {
+    position: absolute;
+    top: 20.3%;
+    width: 8%;
+    height: 4.5%;
+    z-index: 3;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+#undo-btn { left: 69.2%; }
+#redo-btn { left: 79%; }
+
+#undo-btn img, #redo-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#hair-menu-btn, #outfit-menu-btn {
+    position: absolute;
+    left: 71%;
+    width: 19%;
+    height: 13.4%;
+    z-index: 3;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+#hair-menu-btn { top: 28.7%; }
+#outfit-menu-btn { top: 48.4%; }
+
+#hair-menu-btn img, #outfit-menu-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ==========================================
+   PAGINATION & PANEL OPTION STYLES
+   ========================================== */
+
+#hair-options, #outfit-options {
+    position: absolute;
     top: 8%;
     bottom: 4%;
     left: 4%;
